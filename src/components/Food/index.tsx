@@ -19,12 +19,7 @@ interface FoodProps {
   food: FoodType;
 }
 
-export function Food({
-  food,
-  handleDelete,
-  handleEditFood,
-  available,
-}: FoodProps) {
+function Food({ food, handleDelete, handleEditFood, available }: FoodProps) {
   const [isAvailable, setIsAvailable] = useState(available);
 
   async function toggleAvailable() {
