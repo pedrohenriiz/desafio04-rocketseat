@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  ForwardRefRenderFunction,
+} from 'react';
 
 import { useField } from '@unform/core';
 
@@ -6,10 +12,15 @@ import { Container } from './styles';
 
 interface InputProps {
   name: string;
-  icon: React.ElementType;
+  icon?: React.ElementType;
+  placeholder: string;
 }
 
-function Input({ name, icon: Icon, ...rest }: InputProps) {
+const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
+  name,
+  icon: Icon,
+  ...rest
+}) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -42,12 +53,12 @@ function Input({ name, icon: Icon, ...rest }: InputProps) {
       <input
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
-        defaultValue={defaultValue}
         ref={inputRef}
+        defaultValue={defaultValue}
         {...rest}
       />
     </Container>
   );
-}
+};
 
 export default Input;
