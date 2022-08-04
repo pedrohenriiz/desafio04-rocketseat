@@ -6,10 +6,12 @@ import Modal from '../Modal';
 import Input from '../Input';
 
 type FoodTypes = {
+  id: number;
   image: string;
   name: string;
-  price: string;
+  price: number;
   description: string;
+  available: boolean;
 };
 
 interface ModalAddFoodProps {
