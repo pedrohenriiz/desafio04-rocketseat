@@ -29,7 +29,7 @@ function Food({ food, handleDelete, handleEditFood, available }: FoodProps) {
       available: !isAvailable,
     });
 
-    setIsAvailable(!setIsAvailable);
+    setIsAvailable(!isAvailable);
   }
 
   function setEditingFood() {
