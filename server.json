@@ -21,14 +21,14 @@
       "name": "A la Camarón",
       "description": "Macarrão com vegetais de primeira linha e camarão dos 7 mares.",
       "price": "25.90",
-      "available": false,
+      "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     },
     {
-      "image": "ghdgd",
-      "name": "hdhgd",
-      "price": "hdghd",
-      "description": "hdghfd",
+      "image": "https://img.itdg.com.br/tdg/images/recipes/000/086/691/332009/332009_original.jpg?w=1200",
+      "name": "Tiramisu",
+      "price": "19,90",
+      "description": "Deve ser bom",
       "available": true,
       "id": 4
     }
